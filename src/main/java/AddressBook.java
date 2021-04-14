@@ -352,6 +352,7 @@ public class AddressBook {
 //    }
 
 
+    // stubbed data for testing
     private void seedData(){
         contactList = new ArrayList<>();
 
