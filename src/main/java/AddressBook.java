@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class AddressBook {
 
@@ -18,6 +19,11 @@ public class AddressBook {
     }
 
     public void addNewContact(){
+        System.out.println(" Add a new contact");
+        Contact contact = new Contact();
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Enter First name");
 
     }
 
