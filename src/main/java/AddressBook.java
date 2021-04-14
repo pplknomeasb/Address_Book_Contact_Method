@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class AddressBook {
 
@@ -26,7 +27,39 @@ public class AddressBook {
     }
 
     public void searchForContact(){
+        System.out.println("Please select search criteria : ");
+        System.out.println("1) Search by Name");
+        System.out.println("2) Search by Phone Number");
+        Scanner input = new Scanner(System.in);
+        int option = input.nextInt();
+        Contact contact;
+        switch (option){
+            case 1 :
+                System.out.println("Please enter the First name you want search in address book : ");
+                String name = input.next();
+                contact = search(name, "name");
+                break;
+            case 2 :
+                System.out.println("Please enter the phone number you want search in address book : ");
+                String phone = input.next();
+                contact = search(phone, "phone");
+                break;
+            default:
+                return;
+        }
+    }
 
+    private Contact search(String value, String criteria) {
+        for (Contact contact : contactList) {
+            if(criteria.equals("name")) {
+                if (contact.getFirstName().equals(value))
+                    return contact;
+            } else if (criteria.equals("phone")){
+                if (contact.getPhoneMobile().equals(value))
+                    return contact;
+            }
+        }
+        return null;
     }
 
 
