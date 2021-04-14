@@ -28,8 +28,14 @@ public class Contact {
     public Contact(){
 
     }
+    
 
-    public String getFirstName() {
+    public Contact(String firstName) {
+		super();
+		this.firstName = firstName;
+	}
+
+	public String getFirstName() {
         return firstName;
     }
 
