@@ -7,8 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Address_Book_Contact_Method" />
-        <module name="AddressBookGroupD" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Address_Book_Contact_Method" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
