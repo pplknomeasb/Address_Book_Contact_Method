@@ -25,7 +25,7 @@ public class AddressBook {
 
         //Separates the header from the contents of the contactList
         System.out.println("===========================================================================================" +
-                "=================================================================================");
+                "========================================================================================================================");
 
         //Using for loop to loop through the contactList established in Contacts from starting from 0
         for(Contact contact:contactList)
