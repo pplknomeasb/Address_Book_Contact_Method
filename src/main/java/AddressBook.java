@@ -7,13 +7,13 @@ public class AddressBook {
 
     private List<Contact> contactList;
 
-    public AddressBook() {
+    public AddressBook(){
 
         readContactFile();
 
     }
 
-    public AddressBook(Boolean seed) {
+    public AddressBook(Boolean seed){
         seedData();
     }
 
@@ -23,6 +23,62 @@ public class AddressBook {
 
     public void addNewContact(){
 
+        // Prompts user to enter their contacts details
+        System.out.println("Add a new contact");
+
+        // created new Contact and Scanner object
+        Contact contact = new Contact();
+        Scanner input = new Scanner(System.in);
+
+        // prompts user to enter first name and stores in firstName variable
+        System.out.println("Enter First name");
+        String firstName = input.nextLine();
+            if (firstName.equals("")) {
+                System.out.println("Enter the first name again");
+                firstName = input.nextLine();
+            } else {
+                contact.setFirstName(firstName);
+            }
+        // prompts user to enter last name and stores in lastName variable
+        System.out.println("Enter Last name");
+        String lastName = input.nextLine();
+            if( lastName.equals("")){
+                System.out.println("Enter the last name again");
+                lastName = input.nextLine();
+            } else {
+                contact.setLastName(lastName);
+            }
+        System.out.println("Enter mobile number");
+            String phoneMobile = input.nextLine();
+            if(phoneMobile.equals("")){
+                System.out.println("Enter mobile number again");
+                phoneMobile = input.nextLine();
+
+            } else {
+
+                contact.setPhoneMobile(phoneMobile);
+            }
+        System.out.println("Enter email");
+        String email = input.nextLine();
+        contact.setEmail(email);
+
+        System.out.println("Enter street, home number city and zip");
+        String street = input.nextLine();
+        contact.setStreet(street);
+
+        String number = input.nextLine();
+        contact.setNumber(number);
+
+        String city = input.nextLine();
+        contact.setCity(city);
+
+        String zip = input.nextLine();
+        contact.setZip(zip);
+
+        // stored the contact information
+        contactList.add(contact);
+        System.out.println(firstName + "," + lastName+ "," + phoneMobile+ "," +email+ "," +street+ "," +number + "," +city+ "," +zip );
+        System.out.println("Contact information has been saved");
     }
 
     public void deleteContact(){
