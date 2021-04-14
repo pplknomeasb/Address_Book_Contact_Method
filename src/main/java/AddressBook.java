@@ -127,12 +127,20 @@ public class AddressBook {
         seedData();
     }
     public void viewContacts(){
+
+        //Print all contacts header and establishing parameters for view all contacts
         System.out.printf("%-8s  ||  %-8s  ||  %-5s  ||  %-5s  ||  %-29s  ||  %-5s   ||  %-15s  ||  %-19s  ||  %-10s %n",
         "First Name", "Last Name", "Home Phone", "Mobile Phone", "Email", "Street Number", "Street", "City", "Zip");
+
+        //Separates the header from the contents of the contactList
         System.out.println("===========================================================================================" +
                 "=================================================================================");
+
+        //Using for loop to loop through the contactList established in Contacts from starting from 0
         for(Contact contact:contactList)
-             System.out.printf("%-10s  ||  %-9s  ||  %-5s  ||  %-12s  ||  %-29s  ||  %-13s   ||  %-15s  ||  %-19s  ||  %-10s %n",
+
+            //Print formatted for beauty
+            System.out.printf("%-10s  ||  %-9s  ||  %-5s  ||  %-12s  ||  %-29s  ||  %-13s   ||  %-15s  ||  %-19s  ||  %-10s %n",
                     contact.getFirstName(), contact.getLastName(),
                     contact.getPhoneHome(), contact.getPhoneMobile(),
             contact.getEmail(), contact.getNumber(), contact.getStreet(), contact.getCity(), contact.getZip());
