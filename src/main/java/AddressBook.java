@@ -99,7 +99,7 @@ public class AddressBook {
                 System.out.println("Please enter the First name you want search in address book : ");
                 String firstname = input.next();
                 contact = search(firstname, "firstname");
-                
+
                 System.out.println("What would you like to change the first name of the contact to be?");
                 
                 String updateFirstName = input.next();
@@ -109,22 +109,27 @@ public class AddressBook {
                 
                 contactList.set(0, editedFirstName);
                 System.out.println(contactList.toString());
+
                 System.out.println("The First Name of the contact has been edited");
                 
                 break;
                 
             case 2 : 
+
             	 System.out.println("Please enter the last name you want search in address book : ");
+
                  String lastname = input.next();
                  contact = search(lastname, "lastname");
                 
                  System.out.println("What would you like to change the first name of the contact to be?");
                  String updateLastName = input.next();
                  Contact editedLastName = new Contact(updateLastName);
-                 
+             
+ 
                  contactList.set(1, editedLastName);
                  System.out.println(contactList);
                  System.out.println("The Last Name of the contact has been edited");
+
           
                  break;
                  
@@ -135,6 +140,7 @@ public class AddressBook {
                 System.out.println("What would you like to change the phone of the contact to be?");
                 String updatePhone = input.next();
                 Contact editedPhone = new Contact(updatePhone);
+
                 
                 contactList.set(2, editedPhone);
                 System.out.println(contactList);
@@ -148,8 +154,9 @@ public class AddressBook {
             	System.out.println("What would you like to change the first name of the contact to be?");
                 String updateEmail = input.next();
                 Contact editedEmail = new Contact(updateEmail);
-                
+            
                 contactList.set(3, editedEmail);
+
                 System.out.println(contactList);
                 System.out.println("The Email of the contact has been edited");
             	break;
@@ -160,8 +167,10 @@ public class AddressBook {
             	System.out.println("What would you like to change the street of the contact to be?");
                 String updateStreet = input.next();
                 Contact editedStreet = new Contact(updateStreet);
+
                 
                 contactList.set(4, editedStreet);
+
                 System.out.println(contactList);
                 System.out.println("The First Name of the contact has been edited");
             	break;
@@ -172,8 +181,10 @@ public class AddressBook {
             	System.out.println("What would you like to change the first name of the contact to be?");
                 String updateNumber = input.next();
                 Contact editedNumber = new Contact(updateNumber);
+
                 
                 contactList.set(5, editedNumber);
+
                 System.out.println(contactList);
                 System.out.println("The Street Number of the contact has been edited");
             	break;
@@ -184,8 +195,10 @@ public class AddressBook {
             	System.out.println("What would you like to change the first name of the contact to be?");
                 String updateCity = input.next();
                 Contact editedCity = new Contact(updateCity);
+
                 
                 contactList.set(6, editedCity);
+
                 System.out.println(contactList);
                 System.out.println("The First Name of the contact has been edited");
             	break;
@@ -196,8 +209,10 @@ public class AddressBook {
             	System.out.println("What would you like to change the first name of the contact to be?");
                 String updateZip = input.next();
                 Contact editedZip = new Contact(updateZip);
+
                 
                 contactList.set(7, editedZip);
+
                 System.out.println(contactList);
                 System.out.println("The Zip of the contact has been edited");
             	break;
@@ -207,6 +222,7 @@ public class AddressBook {
                 return;
     	 
         }
+
     }
 
 
