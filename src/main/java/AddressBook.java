@@ -8,7 +8,7 @@ public class AddressBook {
     private List<Contact> contactList;
 
     public AddressBook(){
-
+    	seedData();
     }
 
     public AddressBook(Boolean seed){
@@ -83,28 +83,32 @@ public class AddressBook {
                 System.out.println("Please enter the First name you want search in address book : ");
                 String firstname = input.next();
                 contact = search(firstname, "firstname");
+                
                 System.out.println("What would you like to change the first name of the contact to be?");
+                
                 String updateFirstName = input.next();
+                
                 Contact editedFirstName = new Contact(updateFirstName);
-                int index = contactList.indexOf(firstname);
-                contactList.set(index, editedFirstName);
-                System.out.println(contactList);
+                
+                
+                contactList.set(0, editedFirstName);
+                System.out.println(contactList.toString());
                 System.out.println("The First Name of the contact has been edited");
                 
                 break;
                 
             case 2 : 
-            	 System.out.println("Please enter the First name you want search in address book : ");
+            	 System.out.println("Please enter the last name you want search in address book : ");
                  String lastname = input.next();
                  contact = search(lastname, "lastname");
                 
                  System.out.println("What would you like to change the first name of the contact to be?");
                  String updateLastName = input.next();
                  Contact editedLastName = new Contact(updateLastName);
-                 int index1 = contactList.indexOf(lastname);
-                 contactList.set(index1, editedLastName);
+                 
+                 contactList.set(1, editedLastName);
                  System.out.println(contactList);
-                 System.out.println("The First Name of the contact has been edited");
+                 System.out.println("The Last Name of the contact has been edited");
           
                  break;
                  
@@ -115,11 +119,12 @@ public class AddressBook {
                 System.out.println("What would you like to change the phone of the contact to be?");
                 String updatePhone = input.next();
                 Contact editedPhone = new Contact(updatePhone);
-                int index2 = contactList.indexOf(phone);
-                contactList.set(index2, editedPhone);
+                
+                contactList.set(2, editedPhone);
                 System.out.println(contactList);
                 System.out.println("The Phone of the contact has been edited");
                 break;
+                
             case 4 : 
             	System.out.println("Please enter the email you want search in address book : ");
             	String email = input.next();
@@ -127,8 +132,8 @@ public class AddressBook {
             	System.out.println("What would you like to change the first name of the contact to be?");
                 String updateEmail = input.next();
                 Contact editedEmail = new Contact(updateEmail);
-                int index3 = contactList.indexOf(email);
-                contactList.set(index3, editedEmail);
+                
+                contactList.set(3, editedEmail);
                 System.out.println(contactList);
                 System.out.println("The Email of the contact has been edited");
             	break;
@@ -139,8 +144,8 @@ public class AddressBook {
             	System.out.println("What would you like to change the street of the contact to be?");
                 String updateStreet = input.next();
                 Contact editedStreet = new Contact(updateStreet);
-                int index4 = contactList.indexOf(street);
-                contactList.set(index4, editedStreet);
+                
+                contactList.set(4, editedStreet);
                 System.out.println(contactList);
                 System.out.println("The First Name of the contact has been edited");
             	break;
@@ -151,8 +156,8 @@ public class AddressBook {
             	System.out.println("What would you like to change the first name of the contact to be?");
                 String updateNumber = input.next();
                 Contact editedNumber = new Contact(updateNumber);
-                int index5 = contactList.indexOf(number);
-                contactList.set(index5, editedNumber);
+                
+                contactList.set(5, editedNumber);
                 System.out.println(contactList);
                 System.out.println("The Street Number of the contact has been edited");
             	break;
@@ -163,8 +168,8 @@ public class AddressBook {
             	System.out.println("What would you like to change the first name of the contact to be?");
                 String updateCity = input.next();
                 Contact editedCity = new Contact(updateCity);
-                int index6 = contactList.indexOf(city);
-                contactList.set(index6, editedCity);
+                
+                contactList.set(6, editedCity);
                 System.out.println(contactList);
                 System.out.println("The First Name of the contact has been edited");
             	break;
@@ -175,8 +180,8 @@ public class AddressBook {
             	System.out.println("What would you like to change the first name of the contact to be?");
                 String updateZip = input.next();
                 Contact editedZip = new Contact(updateZip);
-                int index7 = contactList.indexOf(zip);
-                contactList.set(index7, editedZip);
+                
+                contactList.set(7, editedZip);
                 System.out.println(contactList);
                 System.out.println("The Zip of the contact has been edited");
             	break;
