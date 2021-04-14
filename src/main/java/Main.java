@@ -46,7 +46,7 @@ public class Main {
                     addrBook.deleteContact();
                     break;
                 case 6:
-                    return;
+                    break;
                 default:
                     System.out.println("Invalid Option Selected.\nPlease select valid menu option.\n");
                     break;
