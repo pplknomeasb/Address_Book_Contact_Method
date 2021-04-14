@@ -1,12 +1,124 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class AddressBook {
 
+    private List<Contact> contactList = new List<Contact>(){
 
-    private List<Contact> contactList;
+        @Override
+        public int size() {
+            return 0;
+        }
 
+        @Override
+        public boolean isEmpty() {
+            return false;
+        }
+
+        @Override
+        public boolean contains(Object o) {
+            return false;
+        }
+
+        @Override
+        public Iterator<Contact> iterator() {
+            return null;
+        }
+
+        @Override
+        public Object[] toArray() {
+            return new Object[0];
+        }
+
+        @Override
+        public <T> T[] toArray(T[] a) {
+            return null;
+        }
+
+        @Override
+        public boolean add(Contact contact) {
+            return false;
+        }
+
+        @Override
+        public boolean remove(Object o) {
+            return false;
+        }
+
+        @Override
+        public boolean containsAll(Collection<?> c) {
+            return false;
+        }
+
+        @Override
+        public boolean addAll(Collection<? extends Contact> c) {
+            return false;
+        }
+
+        @Override
+        public boolean addAll(int index, Collection<? extends Contact> c) {
+            return false;
+        }
+
+        @Override
+        public boolean removeAll(Collection<?> c) {
+            return false;
+        }
+
+        @Override
+        public boolean retainAll(Collection<?> c) {
+            return false;
+        }
+
+        @Override
+        public void clear() {
+
+        }
+
+        @Override
+        public Contact get(int index) {
+            return null;
+        }
+
+        @Override
+        public Contact set(int index, Contact element) {
+            return null;
+        }
+
+        @Override
+        public void add(int index, Contact element) {
+
+        }
+
+        @Override
+        public Contact remove(int index) {
+            return null;
+        }
+
+        @Override
+        public int indexOf(Object o) {
+            return 0;
+        }
+
+        @Override
+        public int lastIndexOf(Object o) {
+            return 0;
+        }
+
+        @Override
+        public ListIterator<Contact> listIterator() {
+            return null;
+        }
+
+        @Override
+        public ListIterator<Contact> listIterator(int index) {
+            return null;
+        }
+
+        @Override
+        public List<Contact> subList(int fromIndex, int toIndex) {
+            return null;
+        }
+    };
     public AddressBook(){
 
     }
@@ -15,7 +127,15 @@ public class AddressBook {
         seedData();
     }
     public void viewContacts(){
-
+        System.out.printf("%-8s  ||  %-8s  ||  %-5s  ||  %-5s  ||  %-29s  ||  %-5s   ||  %-15s  ||  %-19s  ||  %-10s %n",
+        "First Name", "Last Name", "Home Phone", "Mobile Phone", "Email", "Street Number", "Street", "City", "Zip");
+        System.out.println("===========================================================================================" +
+                "=================================================================================");
+        for(Contact contact:contactList)
+             System.out.printf("%-10s  ||  %-9s  ||  %-5s  ||  %-12s  ||  %-29s  ||  %-13s   ||  %-15s  ||  %-19s  ||  %-10s %n",
+                    contact.getFirstName(), contact.getLastName(),
+                    contact.getPhoneHome(), contact.getPhoneMobile(),
+            contact.getEmail(), contact.getNumber(), contact.getStreet(), contact.getCity(), contact.getZip());
     }
 
     public void addNewContact(){
