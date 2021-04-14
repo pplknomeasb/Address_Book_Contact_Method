@@ -19,6 +19,8 @@ public class Main {
             System.out.println("5) Delete a contact");
             System.out.println("6) Exit");
 
+
+
             try {
                 menuOption = input.nextInt();
             } catch (InputMismatchException e) {
@@ -50,5 +52,8 @@ public class Main {
                     break;
             }
         } while (menuOption != 6);
+
+        addrBook.writeContactFile();
+
     }
 }
