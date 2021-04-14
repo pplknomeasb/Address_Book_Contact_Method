@@ -102,12 +102,18 @@ public class Contact {
     }
 
 
-
     @Override
     public String toString() {
-        return super.toString();
+        return "Contact{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phoneHome='" + phoneHome + '\'' +
+                ", phoneMobile='" + phoneMobile + '\'' +
+                ", email='" + email + '\'' +
+                ", street='" + street + '\'' +
+                ", number='" + number + '\'' +
+                ", city='" + city + '\'' +
+                ", zip='" + zip + '\'' +
+                '}';
     }
-
-
-
 }
