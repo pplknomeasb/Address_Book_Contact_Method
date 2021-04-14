@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94f405b2-1b9a-4576-ac58-7e619cf5bfa5" name="Default Changelist" comment="Added the basic working search functionality." />
+    <list default="true" id="94f405b2-1b9a-4576-ac58-7e619cf5bfa5" name="Default Changelist" comment="Added the basic working search functionality.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AddressBook.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +14,9 @@
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="kedar" />
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="goingback2" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -35,14 +40,17 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Address_Book_Contact_Method" />
+      <module name="AddressBookGroupD" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

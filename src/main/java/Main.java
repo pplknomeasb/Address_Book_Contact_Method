@@ -40,7 +40,7 @@ public class Main {
                     addrBook.searchForContact();
                     break;
                 case 4:
-                    addrBook.editContact();
+                    // addrBook.editContact();
                     break;
                 case 5:
                     addrBook.deleteContact();

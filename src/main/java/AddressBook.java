@@ -1,3 +1,4 @@
+import java.io.*;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -224,130 +225,131 @@ public class AddressBook {
     }
 
 
-    public void editContact(){
-    	//calling the searchForContact method to find the contact you want to edit
-
-    	System.out.println("Please select search criteria : ");
-        System.out.println("1) Search by First Name");
-        System.out.println("2 Search by Last Name");
-        System.out.println("3) Search by Phone Number");
-        System.out.println("4) Search by email");
-        System.out.println("5) Search by Street");
-        System.out.println("6) Search by Street Number");
-        System.out.println("7) Search by City");
-        System.out.println("8) Search by Zip");
-        Scanner input = new Scanner(System.in);
-        int option = input.nextInt();
-        Contact contact;
-        switch (option){
-            case 1 :
-                System.out.println("Please enter the First name you want search in address book : ");
-                String firstname = input.next();
-                contact = search(firstname, "firstname");
-                System.out.println("What would you like to change the first name of the contact to be?");
-                String updateFirstName = input.next();
-                Contact editedFirstName = new Contact(updateFirstName);
-                int index = contactList.indexOf(firstname);
-                contactList.set(index, editedFirstName);
-                System.out.println(contactList);
-                System.out.println("The First Name of the contact has been edited");
-
-                break;
-
-            case 2 :
-            	 System.out.println("Please enter the last name you want search in address book : ");
-                 String lastname = input.next();
-                 contact = search(lastname, "lastname");
-
-                 System.out.println("What would you like to change the first name of the contact to be?");
-                 String updateLastName = input.next();
-                 Contact editedLastName = new Contact(updateLastName);
-                 int index1 = contactList.indexOf(lastname);
-                 contactList.set(index1, editedLastName);
-                 System.out.println(contactList);
-                 System.out.println("The Last Name of the contact has been edited");
-
-                 break;
-
-            case 3 :
-                System.out.println("Please enter the phone number you want search in address book : ");
-                String phone = input.next();
-                contact = search(phone, "phone");
-                System.out.println("What would you like to change the phone of the contact to be?");
-                String updatePhone = input.next();
-                Contact editedPhone = new Contact(updatePhone);
-                int index2 = contactList.indexOf(phone);
-                contactList.set(index2, editedPhone);
-                System.out.println(contactList);
-                System.out.println("The Phone of the contact has been edited");
-                break;
-            case 4 :
-            	System.out.println("Please enter the email you want search in address book : ");
-            	String email = input.next();
-            	contact = search(email, "email");
-            	System.out.println("What would you like to change the first name of the contact to be?");
-                String updateEmail = input.next();
-                Contact editedEmail = new Contact(updateEmail);
-                int index3 = contactList.indexOf(email);
-                contactList.set(index3, editedEmail);
-                System.out.println(contactList);
-                System.out.println("The Email of the contact has been edited");
-            	break;
-            case 5 :
-            	System.out.println("Please enter the street you want search in address book : ");
-            	String street = input.next();
-            	contact = search(street, "street");
-            	System.out.println("What would you like to change the street of the contact to be?");
-                String updateStreet = input.next();
-                Contact editedStreet = new Contact(updateStreet);
-                int index4 = contactList.indexOf(street);
-                contactList.set(index4, editedStreet);
-                System.out.println(contactList);
-                System.out.println("The First Name of the contact has been edited");
-            	break;
-            case 6 :
-            	System.out.println("Please enter the Street Number  you want search in address book : ");
-            	String number = input.next();
-            	contact = search(number, "number");
-            	System.out.println("What would you like to change the first name of the contact to be?");
-                String updateNumber = input.next();
-                Contact editedNumber = new Contact(updateNumber);
-                int index5 = contactList.indexOf(number);
-                contactList.set(index5, editedNumber);
-                System.out.println(contactList);
-                System.out.println("The Street Number of the contact has been edited");
-            	break;
-            case 7 :
-            	System.out.println("Please enter the city you want search in address book : ");
-            	String city = input.next();
-            	contact = search(city, "city");
-            	System.out.println("What would you like to change the first name of the contact to be?");
-                String updateCity = input.next();
-                Contact editedCity = new Contact(updateCity);
-                int index6 = contactList.indexOf(city);
-                contactList.set(index6, editedCity);
-                System.out.println(contactList);
-                System.out.println("The First Name of the contact has been edited");
-            	break;
-            case 8 :
-            	System.out.println("Please enter the zip you want search in address book : ");
-            	String zip = input.next();
-            	contact = search(zip, "zip");
-            	System.out.println("What would you like to change the first name of the contact to be?");
-                String updateZip = input.next();
-                Contact editedZip = new Contact(updateZip);
-                int index7 = contactList.indexOf(zip);
-                contactList.set(index7, editedZip);
-                System.out.println(contactList);
-                System.out.println("The Zip of the contact has been edited");
-            	break;
-
-
-            default:
-                return;
-
-        }
-    }
+    // NEEDS TO BE FIXED
+//    public void editContact(){
+//    	//calling the searchForContact method to find the contact you want to edit
+//
+//    	System.out.println("Please select search criteria : ");
+//        System.out.println("1) Search by First Name");
+//        System.out.println("2 Search by Last Name");
+//        System.out.println("3) Search by Phone Number");
+//        System.out.println("4) Search by email");
+//        System.out.println("5) Search by Street");
+//        System.out.println("6) Search by Street Number");
+//        System.out.println("7) Search by City");
+//        System.out.println("8) Search by Zip");
+//        Scanner input = new Scanner(System.in);
+//        int option = input.nextInt();
+//        Contact contact;
+//        switch (option){
+//            case 1 :
+//                System.out.println("Please enter the First name you want search in address book : ");
+//                String firstname = input.next();
+//                contact = search(firstname, "firstname");
+//                System.out.println("What would you like to change the first name of the contact to be?");
+//                String updateFirstName = input.next();
+//                Contact editedFirstName = new Contact(updateFirstName);
+//                int index = contactList.indexOf(firstname);
+//                contactList.set(index, editedFirstName);
+//                System.out.println(contactList);
+//                System.out.println("The First Name of the contact has been edited");
+//
+//                break;
+//
+//            case 2 :
+//            	 System.out.println("Please enter the last name you want search in address book : ");
+//                 String lastname = input.next();
+//                 contact = search(lastname, "lastname");
+//
+//                 System.out.println("What would you like to change the first name of the contact to be?");
+//                 String updateLastName = input.next();
+//                 Contact editedLastName = new Contact(updateLastName);
+//                 int index1 = contactList.indexOf(lastname);
+//                 contactList.set(index1, editedLastName);
+//                 System.out.println(contactList);
+//                 System.out.println("The Last Name of the contact has been edited");
+//
+//                 break;
+//
+//            case 3 :
+//                System.out.println("Please enter the phone number you want search in address book : ");
+//                String phone = input.next();
+//                contact = search(phone, "phone");
+//                System.out.println("What would you like to change the phone of the contact to be?");
+//                String updatePhone = input.next();
+//                Contact editedPhone = new Contact(updatePhone);
+//                int index2 = contactList.indexOf(phone);
+//                contactList.set(index2, editedPhone);
+//                System.out.println(contactList);
+//                System.out.println("The Phone of the contact has been edited");
+//                break;
+//            case 4 :
+//            	System.out.println("Please enter the email you want search in address book : ");
+//            	String email = input.next();
+//            	contact = search(email, "email");
+//            	System.out.println("What would you like to change the first name of the contact to be?");
+//                String updateEmail = input.next();
+//                Contact editedEmail = new Contact(updateEmail);
+//                int index3 = contactList.indexOf(email);
+//                contactList.set(index3, editedEmail);
+//                System.out.println(contactList);
+//                System.out.println("The Email of the contact has been edited");
+//            	break;
+//            case 5 :
+//            	System.out.println("Please enter the street you want search in address book : ");
+//            	String street = input.next();
+//            	contact = search(street, "street");
+//            	System.out.println("What would you like to change the street of the contact to be?");
+//                String updateStreet = input.next();
+//                Contact editedStreet = new Contact(updateStreet);
+//                int index4 = contactList.indexOf(street);
+//                contactList.set(index4, editedStreet);
+//                System.out.println(contactList);
+//                System.out.println("The First Name of the contact has been edited");
+//            	break;
+//            case 6 :
+//            	System.out.println("Please enter the Street Number  you want search in address book : ");
+//            	String number = input.next();
+//            	contact = search(number, "number");
+//            	System.out.println("What would you like to change the first name of the contact to be?");
+//                String updateNumber = input.next();
+//                Contact editedNumber = new Contact(updateNumber);
+//                int index5 = contactList.indexOf(number);
+//                contactList.set(index5, editedNumber);
+//                System.out.println(contactList);
+//                System.out.println("The Street Number of the contact has been edited");
+//            	break;
+//            case 7 :
+//            	System.out.println("Please enter the city you want search in address book : ");
+//            	String city = input.next();
+//            	contact = search(city, "city");
+//            	System.out.println("What would you like to change the first name of the contact to be?");
+//                String updateCity = input.next();
+//                Contact editedCity = new Contact(updateCity);
+//                int index6 = contactList.indexOf(city);
+//                contactList.set(index6, editedCity);
+//                System.out.println(contactList);
+//                System.out.println("The First Name of the contact has been edited");
+//            	break;
+//            case 8 :
+//            	System.out.println("Please enter the zip you want search in address book : ");
+//            	String zip = input.next();
+//            	contact = search(zip, "zip");
+//            	System.out.println("What would you like to change the first name of the contact to be?");
+//                String updateZip = input.next();
+//                Contact editedZip = new Contact(updateZip);
+//                int index7 = contactList.indexOf(zip);
+//                contactList.set(index7, editedZip);
+//                System.out.println(contactList);
+//                System.out.println("The Zip of the contact has been edited");
+//            	break;
+//
+//
+//            default:
+//                return;
+//
+//        }
+//    }
 
 
     private void seedData(){
