@@ -227,7 +227,7 @@ public class AddressBook {
 
     public void editContact(){
     	//calling the searchForContact method to find the contact you want to edit
-
+    	 
     	System.out.println("Please select search criteria : ");
         System.out.println("1) Search by First Name");
         System.out.println("2 Search by Last Name");
@@ -252,24 +252,24 @@ public class AddressBook {
                 contactList.set(index, editedFirstName);
                 System.out.println(contactList);
                 System.out.println("The First Name of the contact has been edited");
-
+                
                 break;
-
-            case 2 :
-            	 System.out.println("Please enter the First name you want search in address book : ");
+                
+            case 2 : 
+            	 System.out.println("Please enter the last name you want search in address book : ");
                  String lastname = input.next();
                  contact = search(lastname, "lastname");
-
+                
                  System.out.println("What would you like to change the first name of the contact to be?");
                  String updateLastName = input.next();
                  Contact editedLastName = new Contact(updateLastName);
                  int index1 = contactList.indexOf(lastname);
                  contactList.set(index1, editedLastName);
                  System.out.println(contactList);
-                 System.out.println("The First Name of the contact has been edited");
-
+                 System.out.println("The Last Name of the contact has been edited");
+          
                  break;
-
+                 
             case 3 :
                 System.out.println("Please enter the phone number you want search in address book : ");
                 String phone = input.next();
@@ -342,15 +342,15 @@ public class AddressBook {
                 System.out.println(contactList);
                 System.out.println("The Zip of the contact has been edited");
             	break;
-
-
+            	
+            	
             default:
                 return;
-
+    	 
         }
     }
 
-    // stubbed data for testing
+
     private void seedData(){
         contactList = new ArrayList<>();
 
