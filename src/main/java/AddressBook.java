@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -17,7 +16,7 @@ public class AddressBook {
         seedData();
     }
 
-    public void viewContacts(){
+    public void viewContacts() {
 
         //Print all contacts header and establishing parameters for view all contacts
         System.out.printf("%-25s  ||  %-25s  ||  %-16s  ||  %-16s  ||  %-29s  ||  %-13s   ||  %-15s  ||  %-19s  ||  %-10s %n",
@@ -37,7 +36,7 @@ public class AddressBook {
             contact.getEmail(), contact.getNumber(), contact.getStreet(), contact.getCity(), contact.getZip());
     }
 
-    public void addNewContact(){
+    public void addNewContact() {
 
         // Prompts user to enter their contacts details
         System.out.println("Add a new contact");
@@ -97,7 +96,7 @@ public class AddressBook {
         System.out.println("Contact information has been saved");
     }
 
-    public void deleteContact(){
+    public void deleteContact() {
 
         Contact contactToDelete;
         String isIncorrectContact = "";
@@ -227,7 +226,7 @@ public class AddressBook {
 
     public void editContact(){
     	//calling the searchForContact method to find the contact you want to edit
-    	 
+
     	System.out.println("Please select search criteria : ");
         System.out.println("1) Search by First Name");
         System.out.println("2 Search by Last Name");
@@ -252,14 +251,14 @@ public class AddressBook {
                 contactList.set(index, editedFirstName);
                 System.out.println(contactList);
                 System.out.println("The First Name of the contact has been edited");
-                
+
                 break;
-                
-            case 2 : 
+
+            case 2 :
             	 System.out.println("Please enter the last name you want search in address book : ");
                  String lastname = input.next();
                  contact = search(lastname, "lastname");
-                
+
                  System.out.println("What would you like to change the first name of the contact to be?");
                  String updateLastName = input.next();
                  Contact editedLastName = new Contact(updateLastName);
@@ -267,9 +266,9 @@ public class AddressBook {
                  contactList.set(index1, editedLastName);
                  System.out.println(contactList);
                  System.out.println("The Last Name of the contact has been edited");
-          
+
                  break;
-                 
+
             case 3 :
                 System.out.println("Please enter the phone number you want search in address book : ");
                 String phone = input.next();
@@ -342,11 +341,11 @@ public class AddressBook {
                 System.out.println(contactList);
                 System.out.println("The Zip of the contact has been edited");
             	break;
-            	
-            	
+
+
             default:
                 return;
-    	 
+
         }
     }
 
