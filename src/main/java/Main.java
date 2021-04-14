@@ -50,5 +50,8 @@ public class Main {
                     break;
             }
         } while (menuOption != 6);
+
+        addrBook.writeContactFile();
+
     }
 }

@@ -1,6 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
+import java.util.function.Predicate;
 
 public class AddressBook {
 
@@ -8,6 +8,8 @@ public class AddressBook {
     private List<Contact> contactList;
 
     public AddressBook() {
+
+        readContactFile();
 
     }
 
