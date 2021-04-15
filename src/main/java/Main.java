@@ -40,13 +40,13 @@ public class Main {
                     addrBook.searchForContact();
                     break;
                 case 4:
-                    addrBook.editContact();
+                    // addrBook.editContact();
                     break;
                 case 5:
                     addrBook.deleteContact();
                     break;
                 case 6:
-                    return;
+                    break;
                 default:
                     System.out.println("Invalid Option Selected.\nPlease select valid menu option.\n");
                     break;
