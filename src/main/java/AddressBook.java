@@ -49,31 +49,39 @@ public class AddressBook {
         // prompts user to enter first name and stores in firstName variable
         System.out.println("Enter First name");
         String firstName = input.nextLine();
+        do {
             if (firstName.equals("")) {
                 System.out.println("Enter the first name again");
                 firstName = input.nextLine();
             } else {
                 contact.setFirstName(firstName);
             }
+        }while (firstName.isEmpty());
+
         // prompts user to enter last name and stores in lastName variable
         System.out.println("Enter Last name");
         String lastName = input.nextLine();
+        do{
             if( lastName.equals("")){
                 System.out.println("Enter the last name again");
                 lastName = input.nextLine();
             } else {
                 contact.setLastName(lastName);
             }
+        } while(lastName.isEmpty());
+
         System.out.println("Enter mobile number");
             String phoneMobile = input.nextLine();
-            if(phoneMobile.equals("")){
-                System.out.println("Enter mobile number again");
-                phoneMobile = input.nextLine();
+            do{
+                if (phoneMobile.equals("")) {
+                    System.out.println("Enter mobile number again");
+                    phoneMobile = input.nextLine();
 
-            } else {
-
+                } else {
                 contact.setPhoneMobile(phoneMobile);
             }
+        } while (phoneMobile.isEmpty());
+
         System.out.println("Enter email");
         String email = input.nextLine();
         contact.setEmail(email);
