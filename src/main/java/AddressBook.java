@@ -231,7 +231,7 @@ public class AddressBook {
 	do {
 	 System.out.println("Please select search criteria : ");
 	 System.out.println("1) Search by First Name"); 
-	 System.out.println("2 Search by Last Name"); 
+	 System.out.println("2) Search by Last Name");
 	 System.out.println("3) Search by Home Number");
 	 System.out.println("4) Search by Mobile Number");
 	 System.out.println("5) Search by email"); 

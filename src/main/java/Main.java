@@ -10,14 +10,14 @@ public class Main {
 
         do {
             //Displaying the Main Menu
-            System.out.println("Welcome to the online Address Book");
-            System.out.println("Please select one of below actions : ");
+            System.out.println("\nWelcome to the online Address Book\n");
             System.out.println("1) View all contacts");
             System.out.println("2) Add new contact");
             System.out.println("3) Search for a contact");
             System.out.println("4) Edit a contact");
             System.out.println("5) Delete a contact");
             System.out.println("6) Exit");
+            System.out.print("Enter your selection: => ");
 
 
 
@@ -48,7 +48,7 @@ public class Main {
                 case 6:
                     break;
                 default:
-                    System.out.println("Invalid Option Selected.\nPlease select valid menu option.\n");
+                    System.out.println("\nInvalid Option Selected.\nPlease select valid menu option.");
                     break;
             }
         } while (menuOption != 6);
